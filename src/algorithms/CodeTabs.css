@@ -1,0 +1,80 @@
+.code-tabs {
+    background: linear-gradient(to bottom right, #1e1e2f, #0f0f1f);
+    color: white;
+    border: 2px solid #facc15;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.1);
+}
+
+.code-tabs__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fde047;
+}
+
+.code-tabs__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.code-tabs__button {
+    background-color: #2d2d40;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.code-tabs__button:hover {
+    background-color: #3f3f5a;
+}
+
+.code-tabs__button.active {
+    background-color: #fde047;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
+}
+
+.code-tabs__display {
+    background: #111111;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #00ff88;
+    border: 1px solid #333;
+    overflow-x: auto;
+    max-height: 500px;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}

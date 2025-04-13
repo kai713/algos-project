@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import {
   swap,
   newTrace,
@@ -39,7 +40,7 @@ export const BubbleSortDesc = {
   description: (
     <p>
       <a
-        href="https://en.wikipedia.org/wiki/Bubble_sort"
+        href="https://code.fandom.com/wiki/Bubble_sort"
         target="_blank"
         rel="noopener noreferrer"
       >

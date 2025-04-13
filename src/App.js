@@ -7,6 +7,7 @@ import TopBar from './components/organisms/TopBar';
 import AppDrawer from './components/organisms/AppDrawer';
 import SortVisualizer from './components/organisms/SortVisualizer';
 import Footer from './components/molecules/Footer';
+import CodeTabs from './algorithms/CodeTabs';
 
 import BubbleSort, {
   BubbleSortKey,
@@ -127,12 +128,17 @@ class App extends Component {
 
         <main className="App__Body">
           <SortVisualizer
-            array={this.state.array}
-            trace={this.state.trace}
-            colorKey={colorKey}
-            desc={desc}
+              array={this.state.array}
+              trace={this.state.trace}
+              colorKey={colorKey}
+              desc={desc}
           />
+          <div className="mt-8">
+            <h2 className="text-center text-xl font-bold text-white mb-4">Code Implementations</h2>
+            <CodeTabs />
+          </div>
         </main>
+
         <Footer />
       </div>
     );
