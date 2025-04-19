@@ -13,7 +13,6 @@
   align-items: center;
 
   text-align: center;
-  word-spacing: 0.25rem;
 
   background-color: var(--background-color-2);
   box-shadow: 0px -2px 1px -1px rgba(0, 0, 0, 0.2);
@@ -32,11 +31,28 @@
     flex-flow: column;
     padding: 0.5rem;
   }
+  .Footer_2{
+    margin-top: 50px;
+  }
 }
 
 .Footer__Items * {
-  padding: 0.25rem 1rem;
+  padding: 0rem 1rem;
 }
+
+.Footer_2{
+  transform: translateY(-60px);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.Footer_2 h5{
+  font-weight: 500;
+}
+
 
 .Footer__Heart {
   color: var(--secondary);
@@ -44,8 +60,9 @@
 }
 
 .Footer__Link {
+  text-align: left;
   color: var(--text-color);
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 2rem;
 }
 

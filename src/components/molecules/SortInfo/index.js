@@ -2,6 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
+/**
+ * EN: Displays detailed information about a selected sorting algorithm.
+ * RU: Отображает подробную информацию о выбранном алгоритме сортировки.
+ *
+ * Includes description, performance metrics (time & space complexity).
+ * Включает описание и характеристики производительности (временная и пространственная сложность).
+ *
+ * @component
+ * @example
+ * <SortInfo
+ *   title="Bubble Sort"
+ *   description={<p>Bubble Sort is a simple algorithm...</p>}
+ *   worstCase={<span>O(n²)</span>}
+ *   avgCase={<span>O(n²)</span>}
+ *   bestCase={<span>O(n)</span>}
+ *   space={<span>O(1)</span>}
+ * />
+ *
+ * @param {Object} props - Component props / Свойства компонента
+ * @param {string} [props.title] - EN: Algorithm name. RU: Название алгоритма.
+ * @param {JSX.Element} [props.description] - EN: JSX description of the algorithm. RU: JSX-описание алгоритма.
+ * @param {JSX.Element} [props.worstCase] - EN: Worst-case time complexity. RU: Худшая временная сложность.
+ * @param {JSX.Element} [props.avgCase] - EN: Average-case time complexity. RU: Средняя временная сложность.
+ * @param {JSX.Element} [props.bestCase] - EN: Best-case time complexity. RU: Лучшая временная сложность.
+ * @param {JSX.Element} [props.space] - EN: Worst-case space complexity. RU: Пространственная сложность в худшем случае.
+ *
+ * @returns {JSX.Element} EN: Rendered algorithm info panel. RU: JSX-блок с информацией об алгоритме.
+ */
 const SortInfo = ({
   title,
   description,

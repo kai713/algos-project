@@ -3,6 +3,10 @@ import { FaCode, FaJava, FaJs, FaPython, FaCuttlefish } from 'react-icons/fa';
 import { SiCplusplus } from 'react-icons/si';
 import './CodeTabs.css';
 
+/**
+ * Object containing code snippets for Bubble Sort in different programming languages.
+ * @type {Object<string, string>}
+ */
 const codeSnippets = {
     c: `void bubble_sort(Long arr[], long n) {
     long c, d, t;
@@ -57,7 +61,16 @@ const codeSnippets = {
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]`
 };
 
+/**
+ * Array of supported programming language keys.
+ * @type {string[]}
+ */
 const languages = ['c', 'cpp', 'java', 'js', 'python'];
+
+/**
+ * Mapping of language keys to display labels and icons.
+ * @type {Object<string, [string, JSX.Element]>}
+ */
 const labels = {
     c: ['C', <FaCuttlefish className="icon" />],
     cpp: ['C++', <SiCplusplus className="icon" />],
@@ -66,6 +79,14 @@ const labels = {
     python: ['Python', <FaPython className="icon" />]
 };
 
+/**
+ * React component that displays Bubble Sort implementations in multiple languages
+ * with tabs to switch between them.
+ *
+ * @component
+ * @example
+ * return <CodeTabs />
+ */
 const CodeTabs = () => {
     const [selectedLang, setSelectedLang] = useState('js');
 
