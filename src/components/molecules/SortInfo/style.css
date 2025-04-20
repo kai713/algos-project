@@ -1,9 +1,15 @@
 .SortInfo {
   text-align: left;
-  width: 80%;
   max-width: 1200px;
   padding: 1rem;
   margin: 0 auto;
+}
+
+
+.SortInfo h1{
+  display: flex;
+  justify-content: center;
+
 }
 
 .SortInfo__Body {
@@ -12,8 +18,13 @@
 }
 
 .SortInfo__Article {
+  margin-right: 4px;
   width: 50ch;
   line-height: 1.3;
+}
+
+.SortInfo__Article h3{
+  margin-top: 16px;
 }
 
 .SortInfo__Article li {
@@ -21,6 +32,7 @@
 }
 
 .SortInfo__Article a {
+  font-weight: 700;
   color: var(--secondary);
 }
 

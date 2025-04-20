@@ -1,7 +1,6 @@
 @import './_settngs/variables.css';
 
 .App {
-  --footer-height: 64px;
 
   box-sizing: border-box;
   min-height: 100vh;
