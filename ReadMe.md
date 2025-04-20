@@ -57,31 +57,31 @@ A **React** application for interactive, step‑by‑step visualization of sorti
 Install dependencies
 
 
-npm install
-# or
+
 yarn
+
 ``` :contentReference[oaicite:4]{index=4}
 Available Scripts
 In the project directory, you can run:
+```
 
-npm start
-Runs the app in development mode. Open http://localhost:3000 to view it. 
-GitHub
 
-npm run build
-Builds the app for production to the build folder. 
-GitHub
+   ```bash
 
-npm test
-Launches the test runner. 
-GitHub
-
-npm run eject
-Ejects Create React App configuration (not reversible). 
-GitHub
-
+    yarn start
+    # Запускает приложение в режиме разработки. Открой http://localhost:3000 чтобы просмотреть.
+    
+    yarn build
+    # Собирает приложение для продакшена в папку build.
+    
+    yarn test
+    # Запускает тестовый раннер.
+    
+    yarn eject
+    # Извлекает конфигурацию Create React App (необратимо).
+```
+````
 🗂 Project Structure
-plain
 
 src/
 ├── _settngs/              # Global CSS variables & themes (dark.css, variables.css) :contentReference[oaicite:9]{index=9}
@@ -98,6 +98,7 @@ src/
 ├── index.css              # Global styles  
 ├── App.css / AppDark.css  # Light / dark theme overrides  
 └── public/                # Static assets (logo, index.html)
+
 🧩 Core Components
 SortVisualizer
 Manages the trace of steps, playback controls, and overall state 
@@ -146,22 +147,32 @@ export const QuickSortKey = createKey('Comparing', 'Swapping');
 export const QuickSortDesc = { title: 'Quick Sort', description: <p>…</p>, worstCase: <span>O(n²)</span>, … };
 Update TopBar to include the new algorithm in the selector menu.
 
+````
+
 👥 Contributing
+
 Contributions are welcome! To file issues or pull requests:
 
 Fork the repository
+
+````
 
 Create a feature branch (git checkout -b feature/XYZ)
 
 Commit your changes (git commit -m 'Add XYZ')
 
 Push to your branch (git push origin feature/XYZ)
-
+````
 Open a Pull Request against master
 
 Please follow Conventional Commits for commit messages.
 
+````
 📝 License
-No license specified. If you wish to apply a license, consider adding an MIT License.
+Copyright (c) 2021
 
----
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
