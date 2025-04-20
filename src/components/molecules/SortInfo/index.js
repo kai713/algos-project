@@ -27,6 +27,8 @@ import './style.css';
  * @param {JSX.Element} [props.avgCase] - EN: Average-case time complexity. RU: Средняя временная сложность.
  * @param {JSX.Element} [props.bestCase] - EN: Best-case time complexity. RU: Лучшая временная сложность.
  * @param {JSX.Element} [props.space] - EN: Worst-case space complexity. RU: Пространственная сложность в худшем случае.
+ * @param {JSX.Element} [props.image] 
+ * 
  *
  * @returns {JSX.Element} EN: Rendered algorithm info panel. RU: JSX-блок с информацией об алгоритме.
  */
@@ -36,7 +38,9 @@ const SortInfo = ({
   worstCase,
   avgCase,
   bestCase,
-  space
+  space,
+  image,
+  youtube
 }) => {
   return (
     <div className="SortInfo">
@@ -57,7 +61,8 @@ const SortInfo = ({
 
         <aside className="SortInfo__Aside">
           <h3>Performance</h3>
-          <table>
+          <div className='SortInfo_Aside_div'>
+          <table >
             <tbody>
               <tr>
                 <td>Worst-case time complexity</td>
@@ -87,7 +92,19 @@ const SortInfo = ({
                 </td>
               </tr>
             </tbody>
+            
           </table>
+          {image && (
+            <div className="SortInfo__Image">
+              {image}
+            </div>
+          )}
+          </div>
+          {youtube && (
+            <div className="SortInfo__Video">
+              {youtube}
+            </div>
+          )}
         </aside>
       </div>
     </div>
@@ -100,7 +117,9 @@ SortInfo.propTypes = {
   worstCase: PropTypes.object,
   avgCase: PropTypes.object,
   bestCase: PropTypes.object,
-  space: PropTypes.object
+  space: PropTypes.object,
+  image: PropTypes.object,
+  youtube: PropTypes.object
 };
 
 export default SortInfo;
