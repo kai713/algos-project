@@ -45,6 +45,7 @@ const SortInfo = ({
 
       <div className="SortInfo__Body">
         <article className="SortInfo__Article">
+          <h3>Description</h3>
           {description ? (
             description
           ) : (

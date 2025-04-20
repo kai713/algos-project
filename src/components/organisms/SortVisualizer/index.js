@@ -178,56 +178,66 @@ class SortVisualizer extends Component {
   render() {
     return (
       <div className="SortVisualizer">
-        <SortChart
-          numbers={this.state.array}
-          maxNum={Math.max(...this.state.array)}
-          groupA={this.state.groupA}
-          groupB={this.state.groupB}
-          groupC={this.state.groupC}
-          groupD={this.state.groupD}
-          sortedIndices={this.state.sortedIndices}
+
+
+
+
+
+
+        <SortInfo {...this.props.desc} />
+
+
+
+
+        <VisualizerControls
+            onPlay={
+              this.state.traceStep === -1
+                  ? this.run.bind(this, this.state.trace)
+                  : this.continue.bind(this)
+            }
+            onPause={this.pause.bind(this)}
+            onForward={this.stepForward.bind(this)}
+            onBackward={this.stepBackward.bind(this)}
+            onRepeat={this.repeat.bind(this)}
+            onAdjustSpeed={this.adjustPlaybackSpeed}
+            playing={this.state.timeoutIds.length > 0}
+            playDisabled={
+                (this.state.traceStep >= this.state.trace.length - 1 &&
+                    this.state.traceStep !== -1) ||
+                this.state.trace.length <= 0
+            }
+            forwardDisabled={
+                this.state.traceStep >= this.state.trace.length - 1
+            }
+            backwardDisabled={this.state.traceStep <= 0}
+            repeatDisabled={this.state.traceStep <= 0}
+            playbackSpeed={this.state.playbackSpeed}
         />
+
 
         <div className="SortVisualizer__ProgressBar">
           <ProgressBar
-            width={
-              this.state.trace.length > 0
-                ? (this.state.traceStep /
-                    (this.state.trace.length - 1)) *
-                  100
-                : 0
-            }
+              width={
+                this.state.trace.length > 0
+                    ? (this.state.traceStep /
+                        (this.state.trace.length - 1)) *
+                    100
+                    : 0
+              }
           />
         </div>
-
-        <VisualizerControls
-          onPlay={
-            this.state.traceStep === -1
-              ? this.run.bind(this, this.state.trace)
-              : this.continue.bind(this)
-          }
-          onPause={this.pause.bind(this)}
-          onForward={this.stepForward.bind(this)}
-          onBackward={this.stepBackward.bind(this)}
-          onRepeat={this.repeat.bind(this)}
-          onAdjustSpeed={this.adjustPlaybackSpeed}
-          playing={this.state.timeoutIds.length > 0}
-          playDisabled={
-            (this.state.traceStep >= this.state.trace.length - 1 &&
-              this.state.traceStep !== -1) ||
-            this.state.trace.length <= 0
-          }
-          forwardDisabled={
-            this.state.traceStep >= this.state.trace.length - 1
-          }
-          backwardDisabled={this.state.traceStep <= 0}
-          repeatDisabled={this.state.traceStep <= 0}
-          playbackSpeed={this.state.playbackSpeed}
+        <SortChart
+            numbers={this.state.array}
+            maxNum={Math.max(...this.state.array)}
+            groupA={this.state.groupA}
+            groupB={this.state.groupB}
+            groupC={this.state.groupC}
+            groupD={this.state.groupD}
+            sortedIndices={this.state.sortedIndices}
         />
 
         <ColorKey {...this.props.colorKey} />
 
-        <SortInfo {...this.props.desc} />
       </div>
     );
   }

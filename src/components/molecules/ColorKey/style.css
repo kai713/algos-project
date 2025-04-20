@@ -1,12 +1,11 @@
 /* BLOCK */
 .ColorKey {
   display: flex;
-  flex-flow: row wrap;
   padding: 1rem;
-  width: 80%;
   max-width: 1200px;
+  justify-content: center;
   margin: 0 auto;
-  text-align: left;
+
 }
 
 /* ELEMENT */
