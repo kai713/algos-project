@@ -1,30 +1,24 @@
 .App_dark {
-  /* MD Green 200 */
   --primary: #a5d6a7;
   --primary-light: #d7ffd9;
   --primary-dark: #75a478;
 
-  /* MD Pink 200 */
   --secondary: #f48fb1;
   --secondary-light: #ffc1e3;
   --secondary-dark: #bf5f82;
 
-  /* MD Blue 200 */
   --blue: #90caf9;
   --blue-light: #c3fdff;
   --blue-dark: #5d99c6;
 
-  /* MD Red 200 */
   --red: #ef9a9a;
   --red-light: #ffcccb;
   --red-dark: #ba6b6c;
 
-  /* MD Yellow 200 */
   --yellow: #fff59d;
   --yellow-light: #ffffcf;
   --yellow-dark: #cbc26d;
 
-  /* MD Amber 200 */
   --amber: #ffe082;
   --amber-light: #ffffb3;
   --amber-dark: #caae53;

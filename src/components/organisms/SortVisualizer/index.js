@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
 import './style.css';
 
-// Sub components
 import SortChart from '../SortChart';
 import VisualizerControls from '../../molecules/VisualizerControls';
 import ProgressBar from '../../molecules/ProgressBar';
 import ColorKey from '../../molecules/ColorKey';
 import SortInfo from '../../molecules/SortInfo';
+/**
+ * EN: Main component that handles step-by-step sorting visualization.
+ * RU: Основной компонент, отвечающий за пошаговую визуализацию алгоритма сортировки.
+ *
+ * It receives a `trace` of sorting steps and animates the process over time.
+ * Принимает `trace` — массив шагов сортировки, и проигрывает его как анимацию.
+ *
+ * Includes controls for playback, step navigation, speed adjustment, and visualization elements.
+ * Содержит элементы управления (воспроизведение, шаги, скорость), а также визуализацию и легенду.
+ *
+ * @component
+ * @example
+ * <SortVisualizer trace={bubbleSortTrace} array={[5, 2, 8]} colorKey={...} desc={...} />
+ *
+ * @property {Object[]} props.trace - EN: Array of visual steps (tracing state of array). RU: Шаги визуализации (состояния массива).
+ * @property {number[]} props.array - EN: The original unsorted array. RU: Исходный неотсортированный массив.
+ * @property {Object} props.colorKey - EN: Object with labels for color-coded groups. RU: Объект с подписями для цветовых групп.
+ * @property {Object} props.desc - EN: Object containing algorithm description and performance info. RU: Объект с описанием алгоритма и характеристиками.
+ *
+ * @returns {JSX.Element} EN: A full sorting visualization interface. RU: Полный интерфейс визуализации сортировки.
+ */
 
 class SortVisualizer extends Component {
   state = {

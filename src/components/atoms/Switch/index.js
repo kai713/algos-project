@@ -1,23 +1,42 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
-
+/**
+ * EN: Custom toggle switch component that manages its own state and calls a callback on toggle.
+ * RU: Кастомный компонент-переключатель, который управляет своим состоянием и вызывает колбэк при смене состояния.
+ *
+ * @component
+ * @example
+ * // EN: Example usage of Switch
+ * // RU: Пример использования Switch
+ * <Switch checked={true} onSwitch={() => console.log('toggled')} label="Dark Mode" />
+ */
 class Switch extends Component {
   state = {
     checked: false
   };
-
+  /**
+   * EN: Initializes `checked` state from props after component mounts.
+   * RU: Инициализирует состояние `checked` из props после монтирования компонента.
+   */
   componentDidMount() {
     if (this.props.checked) {
       this.setState({ checked: this.props.checked });
     }
   }
 
+  /**
+   * EN: Updates `checked` state if `checked` prop has changed.
+   * RU: Обновляет состояние `checked`, если изменился prop `checked`.
+   *
+   * @param {Object} prevProps - EN: Previous props. RU: Предыдущие свойства.
+   */
   componentDidUpdate(prevProps) {
     if (prevProps.checked !== this.props.checked) {
       this.setState({ checked: this.props.checked });
     }
   }
+
 
   toggleChecked = () => {
     this.setState((prevState) => ({ checked: !prevState.checked }));

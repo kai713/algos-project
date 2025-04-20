@@ -1,30 +1,24 @@
 .App {
-  /* MD Green 400 */
   --primary: #66bb6a;
   --primary-light: #98ee99;
   --primary-dark: #338a3e;
 
-  /* MD Pink 300 */
   --secondary: #f06292;
   --secondary-light: #ff94c2;
   --secondary-dark: #ba2d65;
 
-  /* MD Blue 400 */
   --blue: #42a5f5;
   --blue-light: #80d6ff;
   --blue-dark: #0077c2;
 
-  /* MD Red 400 */
   --red: #ef5350;
   --red-light: #ff867c;
   --red-dark: #ff867c;
 
-  /* MD Yellow 400 */
   --yellow: #ffee58;
   --yellow-light: #ffff8b;
   --yellow-dark: #c9bc1f;
 
-  /* MD Amber 300 */
   --amber: #ffd54f;
   --amber-light: #ffff81;
   --amber-dark: #c8a415;

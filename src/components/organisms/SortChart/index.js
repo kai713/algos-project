@@ -3,7 +3,36 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 import Bar from '../../atoms/Bar';
-
+/**
+ * EN: A component that renders a bar chart representing the current state of a sorting algorithm.
+ * RU: Компонент, отображающий состояние алгоритма сортировки в виде столбиковой диаграммы.
+ *
+ * Each bar’s height is proportional to its value. Bars are colored based on their group state (A, B, C, D).
+ * Высота столбцов пропорциональна числам, цвета показывают текущие действия (сравнение, обмен, и т.д.).
+ *
+ * @component
+ * @example
+ * <SortChart
+ *   numbers={[10, 30, 20]}
+ *   maxNum={30}
+ *   groupA={[1]}
+ *   groupB={[]}
+ *   groupC={[]}
+ *   groupD={[]}
+ *   sortedIndices={[2]}
+ * />
+ *
+ * @param {Object} props - Component props / Свойства компонента
+ * @param {number[]} props.numbers - EN: Array of values to sort. RU: Массив чисел, которые сортируются.
+ * @param {number} props.maxNum - EN: Maximum value in the array (for height scaling). RU: Максимальное значение (для масштабирования высоты).
+ * @param {number[]} props.groupA - EN: Indices in group A (e.g., being compared). RU: Индексы группы A (например, сравнение).
+ * @param {number[]} props.groupB - EN: Indices in group B (e.g., being swapped). RU: Индексы группы B (например, обмен).
+ * @param {number[]} props.groupC - EN: Optional group C. RU: Дополнительная группа C.
+ * @param {number[]} props.groupD - EN: Optional group D (e.g., active focus). RU: Дополнительная группа D (например, текущий элемент).
+ * @param {number[]} props.sortedIndices - EN: Indices already sorted. RU: Индексы, которые уже отсортированы.
+ *
+ * @returns {JSX.Element} EN: Rendered bar chart. RU: JSX-график сортировки.
+ */
 const getListOfBars = (
   numbers,
   maxNum,

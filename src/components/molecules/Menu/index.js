@@ -2,7 +2,32 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
-// Sub components
+/**
+ * EN: A dropdown menu component with optional toggle icon and selectable items.
+ * RU: Компонент выпадающего меню с иконкой (по желанию) и возможностью выбора элементов.
+ *
+ * Includes a Backdrop overlay that closes the menu when clicking outside.
+ * Содержит затемнение (Backdrop), чтобы закрывать меню при клике вне области.
+ *
+ * @component
+ * @example
+ * <Menu
+ *   items={['Low', 'Medium', 'High']}
+ *   selected="Medium"
+ *   onSelect={(val) => console.log(val)}
+ *   placeholder="Select priority"
+ * />
+ *
+ * @param {Object} props - Component props / Свойства компонента
+ * @param {string} [props.className] - EN: Optional additional class names. RU: Дополнительные CSS-классы.
+ * @param {string} [props.selected] - EN: Currently selected value. RU: Текущее выбранное значение.
+ * @param {function} [props.onSelect] - EN: Callback when an item is selected. RU: Функция при выборе элемента.
+ * @param {string} [props.placeholder] - EN: Placeholder text when no item is selected. RU: Текст-заглушка, если ничего не выбрано.
+ * @param {string[]} [props.items] - EN: List of menu options. RU: Массив вариантов меню.
+ * @param {boolean} [props.noDropIcon] - EN: If true, hides the drop-down icon. RU: Если true — не показывать иконку раскрытия.
+ *
+ * @returns {JSX.Element} The rendered dropdown menu component.
+ */
 import Backdrop from '../../atoms/Backdrop';
 import {
   MdExpandMore as AngleDown,
