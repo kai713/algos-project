@@ -8,6 +8,11 @@
   --top-bar-content-display: none;
   --top-bar-mobile-breakpoint: 599px;
 
+  background: linear-gradient(to bottom right, #1e1e2f, #0f0f1f);
+  color: white;
+  border: 1px solid #facc15;
+  font-family: 'Fira Code', monospace;
+
   display: flex;
   position: fixed;
   flex-direction: column;
@@ -21,6 +26,18 @@
 
   transition: background-color 500ms ease-in-out;
 }
+
+.custom-dropdown {
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.custom-dropdown::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
 
 /* Default Mobile Styles */
 @media (max-width: 599px) {

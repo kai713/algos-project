@@ -1,72 +1,77 @@
+:root {
+    --footer-bg: #121212;
+    --footer-text: #e0e0e0;
+    --footer-link: #90caf9;
+    --footer-link-hover: #64b5f6;
+}
+
 .Footer {
-  box-sizing: border-box;
-  min-height: 64px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto; /* <-- Центрирует по горизонтали */
-  padding: 1rem 20px;
+    padding: 2rem 1rem;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
 
-  bottom: 0;
-
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-
-  text-align: center;
-
-  background-color: var(--background-color-2);
-  box-shadow: 0px -2px 1px -1px rgba(0, 0, 0, 0.2);
-
-  transition: background-color 500ms ease-in-out;
 }
 
-.Footer__Items {
-  flex-grow: 1;
-  display: inline-flex;
-  justify-content: flex-end;
+.Footer__Authors a {
+    text-decoration: none;
+    color: var(--footer-link);
+    margin: 2px 0;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 599px) {
-  .Footer__Items {
-    flex-flow: column;
-    padding: 0.5rem;
-  }
-  .Footer_2{
-    margin-top: 50px;
-  }
-}
-
-.Footer__Items * {
-  padding: 0rem 1rem;
-}
-
-.Footer_2{
-  transform: translateY(-60px);
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 30px;
-  font-weight: 500;
-  font-size: 14px;
-}
-.Footer_2 h5{
-  font-weight: 500;
+.Footer__Authors a:hover {
+    color: var(--footer-link-hover);
 }
 
 
-.Footer__Heart {
-  color: var(--secondary);
-  font-weight: 700;
+.Footer__Authors,
+.Footer__Links {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
-.Footer__Link {
-  text-align: left;
-  color: var(--text-color);
-  font-weight: 500;
-  padding-left: 2rem;
+.Footer__Authors h4,
+.Footer__Links h4 {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.Footer__Link:hover {
-  color: var(--secondary-dark);
+.Footer__Authors p {
+    margin: 2px 0;
+    color: var(--footer-text);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.Footer__Links a {
+    text-decoration: none;
+    color: var(--footer-link);
+    margin: 3px 0;
+    transition: color 0.3s ease;
+}
+
+.Footer__Links a:hover {
+    color: var(--footer-link-hover);
+}
+
+@media (max-width: 600px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

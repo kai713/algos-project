@@ -113,6 +113,7 @@ class App extends Component {
     return (
       <div className={theme}>
         <TopBar
+            className="custom-dropdown"
           drawerOpen={this.state.appDrawerOpen}
           toggleDrawer={this.toggleAppDrawer}
         >
@@ -134,7 +135,6 @@ class App extends Component {
               desc={desc}
           />
           <div className="mt-8">
-            <h2 className="text-center text-xl font-bold text-white mb-4">Code Implementations</h2>
             <CodeTabs />
           </div>
         </main>
