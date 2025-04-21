@@ -63,6 +63,7 @@
 /* Modifiers */
 .Button_uppercase {
   text-transform: uppercase;
+  color: gray;
 }
 
 .Button_dense {

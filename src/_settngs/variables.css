@@ -1,5 +1,5 @@
 .App {
-  --primary: #66bb6a;
+  --primary: #000000;
   --primary-light: #98ee99;
   --primary-dark: #3cb746;
 
@@ -27,7 +27,7 @@
   --gray-50: rgb(242, 242, 247);
   --gray-100: rgb(229, 229, 234);
   --gray-200: rgb(209, 209, 214);
-  --gray-300: rgb(228, 228, 252);
+  --gray-300: rgb(134, 134, 141);
   --gray-400: rgb(174, 174, 178);
   --gray-500: rgb(142, 142, 147);
   --gray-600: rgb(99, 99, 102);
@@ -41,7 +41,7 @@
   --button-disabled-ink-color: rgba(0, 0, 0, 0.37);
 
   --background-color-1: white;
-  --background-color-2: white;
+  --background-color-2: #ffffff;
   --background-color-3: white;
   --background-color-4: white;
 
