@@ -7,6 +7,7 @@ import {
   createRange,
   createKey
 } from './helpers';
+import graph from "./images/graph_q.png";
 
 const QuickSort = (nums) => {
   // Initial State
@@ -186,6 +187,25 @@ export const QuickSortDesc = {
     <span>
       O(log<em>n</em>)
     </span>
+  ),
+  image: (
+      <img
+          src= {graph}
+          alt="Bubble Sort"
+          style={{ width: '250px', height: 'auto' }}
+      />
+  ),
+  youtube: (
+      <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/j2w7q0DgzSs"
+          title="YouTube video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen>
+      </iframe>
+
   )
 };
 

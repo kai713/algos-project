@@ -3,11 +3,13 @@ import './App.css';
 import './AppDark.css';
 
 import AppControls from './components/molecules/AppControls';
-import CodeTabs from "./algorithms/CodeTabs";
 import TopBar from './components/organisms/TopBar';
 import AppDrawer from './components/organisms/AppDrawer';
 import SortVisualizer from './components/organisms/SortVisualizer';
 import Footer from './components/molecules/Footer';
+import CodeTabs from "./algorithms/CodeTabs";
+import CodeTabs_Q from "./algorithms/CodeTabs_Q"; // 👈 QuickSort табы
+
 
 import BubbleSort, {
   BubbleSortKey,
@@ -142,7 +144,9 @@ class App extends Component {
             />
             <></>
           </main>
-          <CodeTabs/>
+          {this.state.algorithm === 'Bubble Sort' && <CodeTabs />}
+          {this.state.algorithm === 'Quick Sort' && <CodeTabs_Q />}
+
 
           <Footer />
         </div>
