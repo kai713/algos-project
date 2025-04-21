@@ -19,6 +19,7 @@ import QuickSort, {
   QuickSortKey,
   QuickSortDesc
 } from './algorithms/QuickSort';
+import Comparator from './components/organisms/Comparator/Comparator';
 
 class App extends Component {
   state = {
@@ -146,6 +147,7 @@ class App extends Component {
           </main>
           {this.state.algorithm === 'Bubble Sort' && <CodeTabs />}
           {this.state.algorithm === 'Quick Sort' && <CodeTabs_Q />}
+          <Comparator/>
 
 
           <Footer />

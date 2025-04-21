@@ -1,0 +1,107 @@
+.comparison-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 16px;
+}
+
+.buttons-group button {
+  padding: 8px 16px;
+  margin: 0 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.spin-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.reload-icon {
+  font-size: 24px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.results {
+  display: flex;
+  gap: 32px;
+  margin-top: 0px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sort-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-block h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.result-box {
+  min-width: 100px;
+  min-height: 25px;
+  padding: 16px;
+  border: 2px solid #cfd9e4;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.selected {
+  background-color: #007bff;
+  color: red;
+  border: 1px solid #007bff;
+}
+
+.buttons-group button {
+  padding: 8px 16px;
+  margin: 0 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+.title{
+  font-size: 30px;
+}
