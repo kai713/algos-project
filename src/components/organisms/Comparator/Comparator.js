@@ -18,9 +18,9 @@ export default function SortingComparison() {
 
     setTimeout(() => {
       const times = {
-        10: [2, 3],
-        100: [15, 18],
-        1000: [120, 150]
+        10: [2, 1],
+        100: [12, 2],
+        1000: [2250, 15]
       };
 
       const [time1, time2] = times[selectedCount];
