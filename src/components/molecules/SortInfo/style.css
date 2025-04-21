@@ -1,3 +1,7 @@
+*{
+  font-family: "JetBrains Mono", monospace;
+}
+
 .SortInfo {
   text-align: left;
   max-width: 1200px;
@@ -10,7 +14,15 @@
 .SortInfo h1{
   display: flex;
   justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 20px;
 
+}
+h3{
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .SortInfo__Body {

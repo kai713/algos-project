@@ -21,6 +21,7 @@ const AppControls = ({
         placeholder="Sort Algorithm"
         items={[
           'Bubble Sort',
+            'Quick Sort',
 
         ]}
         selected={algorithm}
