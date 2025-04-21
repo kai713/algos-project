@@ -26,6 +26,7 @@ class App extends Component {
 
   ALGORITHM = {
     'Bubble Sort': BubbleSort,
+    'QuickSort': BubbleSort,
   };
 
   ALGORITHM_KEY = {
