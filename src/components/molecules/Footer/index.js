@@ -1,66 +1,35 @@
 import React from 'react';
 import './style.css';
-/**
- * EN: Footer component displaying project authors and references.
- * RU: Компонент подвала страницы, отображающий авторов проекта и используемые источники.
- *
- * @component
- * @example
- * <Footer />
- *
- * @returns {JSX.Element} EN: Rendered footer content. RU: Возвращает JSX с содержимым подвала.
- */
-const Footer = (props) => {
-  return (
-    <footer className="Footer">
-      <section>
-        Designed and built with{' '}
-        <h5
-          rel="noopener noreferrer"
-          className="Footer__Link"
-        >
-          Kairgaliyev Bekbolsyn
-        </h5>
-        <h5
-            rel="noopener noreferrer"
-            className="Footer__Link"
-        >
-          Amangeldin Ersultan
-        </h5>
-        <h5
-            rel="noopener noreferrer"
-            className="Footer__Link"
-        >
-          Tolegen Abdurakhman
-        </h5>
-        <h5
-            rel="noopener noreferrer"
-            className="Footer__Link"
-        >
-          Marat Arslan
-        </h5>
-      </section>
 
-      <section className="Footer_2">
-        <h3>Used references:</h3> {' '}
-        <a
-          href="https://en.wikipedia.org/wiki/Bubble_sort"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="Footer__Link"
-        >
-          Wiki bubble sort
-        </a>
-        <a
-          href="https://www.w3schools.com/dsa/dsa_algo_bubblesort.php"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="Footer__Link"
-        >
-          W3 bubble sort
-        </a>
-      </section>
-    </footer>
+const Footer = () => {
+  return (
+      <footer className="Footer">
+        <section className="Footer__Authors">
+          <h4>Created by:</h4>
+          <a href="https://github.com/kai713">Kairgaliyev Bekbolsyn</a>
+          <a href="https://github.com/YersDev">Amangeldin Ersultan</a>
+          <a href="https://github.com/aboksk">Tolegen Abdurakhman</a>
+          <a href="https://github.com/MAGunter">Marat Arslan</a>
+        </section>
+
+        <section className="Footer__Links">
+          <h4>References:</h4>
+          <a
+              href="https://en.wikipedia.org/wiki/Bubble_sort"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            Wikipedia – Bubble Sort
+          </a>
+          <a
+              href="https://www.w3schools.com/dsa/dsa_algo_bubblesort.php"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            W3Schools – Bubble Sort
+          </a>
+        </section>
+      </footer>
   );
 };
 

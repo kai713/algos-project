@@ -41,7 +41,6 @@ const SortInfo = ({
   return (
     <div className="SortInfo">
       <hr />
-      <h1>{title ? title : 'Select Algorithm'}</h1>
 
       <div className="SortInfo__Body">
         <article className="SortInfo__Article">
