@@ -7,12 +7,18 @@ import TopBar from './components/organisms/TopBar';
 import AppDrawer from './components/organisms/AppDrawer';
 import SortVisualizer from './components/organisms/SortVisualizer';
 import Footer from './components/molecules/Footer';
-import CodeTabs from './algorithms/CodeTabs';
+import CodeTabs from "./algorithms/CodeTabs";
+import CodeTabs_Q from "./algorithms/CodeTabs_Q"; // 👈 QuickSort табы
+
 
 import BubbleSort, {
   BubbleSortKey,
   BubbleSortDesc
 } from './algorithms/BubbleSort';
+import QuickSort, {
+  QuickSortKey,
+  QuickSortDesc
+} from './algorithms/QuickSort';
 
 class App extends Component {
   state = {
@@ -26,15 +32,17 @@ class App extends Component {
 
   ALGORITHM = {
     'Bubble Sort': BubbleSort,
-    'QuickSort': BubbleSort,
+    'Quick Sort': QuickSort,
   };
 
   ALGORITHM_KEY = {
     'Bubble Sort': BubbleSortKey,
+    'Quick Sort': QuickSortKey,
   };
 
   ALGORITHM_DESC = {
     'Bubble Sort': BubbleSortDesc,
+    'Quick Sort': QuickSortDesc,
   };
 
   componentDidMount() {
@@ -49,15 +57,15 @@ class App extends Component {
 
     // Generate an array of length max
     const array = Array(this.state.arraySize)
-      .fill(0)
-      .map(() => getRandomInt(this.state.arraySize * 5));
+        .fill(0)
+        .map(() => getRandomInt(this.state.arraySize * 5));
 
     this.setState(
-      {
-        array,
-        trace: []
-      },
-      this.createTrace
+        {
+          array,
+          trace: []
+        },
+        this.createTrace
     );
   };
 
@@ -100,48 +108,48 @@ class App extends Component {
     const desc = this.ALGORITHM_DESC[this.state.algorithm];
 
     const controls = (
-      <AppControls
-        onGenerateRandomArray={this.generateRandomArray}
-        algorithm={this.state.algorithm}
-        onAlgorithmChange={this.handleAlgorithmChange}
-        arraySize={this.state.arraySize}
-        onArraySizeChange={this.handleArraySizeChange}
-        onToggleDarkMode={this.toggleDarkMode}
-        darkMode={this.state.darkMode}
-      />
+        <AppControls
+            onGenerateRandomArray={this.generateRandomArray}
+            algorithm={this.state.algorithm}
+            onAlgorithmChange={this.handleAlgorithmChange}
+            arraySize={this.state.arraySize}
+            onArraySizeChange={this.handleArraySizeChange}
+            onToggleDarkMode={this.toggleDarkMode}
+            darkMode={this.state.darkMode}
+        />
     );
 
     return (
-      <div className={theme}>
-        <TopBar
-            className="custom-dropdown"
-          drawerOpen={this.state.appDrawerOpen}
-          toggleDrawer={this.toggleAppDrawer}
-        >
-          {controls}
-        </TopBar>
+        <div className={theme}>
+          <TopBar
+              drawerOpen={this.state.appDrawerOpen}
+              toggleDrawer={this.toggleAppDrawer}
+          >
+            {controls}
+          </TopBar>
 
-        <AppDrawer
-          open={this.state.appDrawerOpen}
-          closeDrawer={this.toggleAppDrawer}
-        >
-          {controls}
-        </AppDrawer>
+          <AppDrawer
+              open={this.state.appDrawerOpen}
+              closeDrawer={this.toggleAppDrawer}
+          >
+            {controls}
+          </AppDrawer>
 
-        <main className="App__Body">
-          <SortVisualizer
-              array={this.state.array}
-              trace={this.state.trace}
-              colorKey={colorKey}
-              desc={desc}
-          />
-          <div className="mt-8">
-            <CodeTabs />
-          </div>
-        </main>
+          <main className="App__Body">
+            <SortVisualizer
+                array={this.state.array}
+                trace={this.state.trace}
+                colorKey={colorKey}
+                desc={desc}
+            />
+            <></>
+          </main>
+          {this.state.algorithm === 'Bubble Sort' && <CodeTabs />}
+          {this.state.algorithm === 'Quick Sort' && <CodeTabs_Q />}
 
-        <Footer />
-      </div>
+
+          <Footer />
+        </div>
     );
   }
 }
