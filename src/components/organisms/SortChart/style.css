@@ -1,13 +1,13 @@
 .SortChart {
-  /* min-width: 320px; */
-  /* max-width: 960px; */
+
+  border-radius: 10px;
   min-height: 218px;
   height: 40vh;
   padding: 1rem;
   max-width: 1200px;
 
   margin: 0 auto;
-  background-color: var(--gray-300);
+  background-color: gray;
 
   display: flex;
   flex-direction: row;

@@ -11,7 +11,7 @@
     top: 100%;
     left: 0;
     right: 0;
-
+    color: white;
 
     max-height: 80vh;
     padding: 0;
@@ -21,7 +21,8 @@
 
     text-align: justify;
     list-style: none;
-    background-color: var(--background-color-2);
+    background: linear-gradient(to bottom right, #1e1e2f, #0f0f1f);
+
 }
 
 .Menu__Header {
@@ -39,11 +40,9 @@
 }
 
 .Menu__Placeholder {
-    color: var(--gray-500);
 }
 
 .Menu__Item {
-    border-bottom: 1px solid var(--gray-300);
     padding: 0.75rem;
     scrollbar-width: none;
 }
