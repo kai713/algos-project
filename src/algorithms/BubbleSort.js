@@ -8,44 +8,47 @@ import {
 } from './helpers';
 import graph from "./images/graph.png";
 
-/**
- * Performs Bubble Sort on an array of numbers and creates a trace of the sorting steps for visualization.
- *
- * @function
- * @param {number[]} nums - The array of numbers to sort.
- * @returns {Array} trace - An array representing each step of the sorting process,
- * including comparisons and swaps, for animation or visualization purposes.
- */
-const BubbleSort = (nums) => {
-    const trace = newTrace(nums);
+    /**
+     * Performs Bubble Sort on an array of numbers and creates a trace of the sorting steps for visualization.
+     *
+     * @function
+     * @param {number[]} nums - The array of numbers to sort.
+     * @returns {Array} trace - An array representing each step of the sorting process,
+     * including comparisons and swaps, for animation or visualization purposes.
+     */
+    const BubbleSort = (nums) => {
+        const trace = newTrace(nums);
 
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 0; j < nums.length - i - 1; j++) {
-            // Visualize: Comparing A[j] and A[j + 1]
-            addToTrace(trace, nums, lastSorted(trace), [j, j + 1]);
-            if (nums[j] > nums[j + 1]) {
-                swap(nums, j, j + 1);
-                // Visualize: Swap A[j] and A[j + 1]
-                addToTrace(trace, nums, lastSorted(trace), [], [j, j + 1]);
+        for (let i = 0; i < nums.length; i++) {
+            for (let j = 0; j < nums.length - i - 1; j++) {
+                // Visualize: Comparing A[j] and A[j + 1]
+                addToTrace(trace, nums, lastSorted(trace), [j, j + 1]);
+                if (nums[j] > nums[j + 1]) {
+                    swap(nums, j, j + 1);
+                    // Visualize: Swap A[j] and A[j + 1]
+                    addToTrace(trace, nums, lastSorted(trace), [], [j, j + 1]);
+                }
             }
+
+            // Visualize: final value is sorted
+            addToTrace(trace, nums, [...lastSorted(trace), nums.length - 1 - i]);
         }
 
-        // Visualize: final value is sorted
-        addToTrace(trace, nums, [...lastSorted(trace), nums.length - 1 - i]);
-    }
+        return trace;
+    };
 
-    return trace;
-};
+    /**
+     * Key for visualizing Bubble Sort actions.
+     *
+     * @constant
+     * @type {Object}
+     * @property {string} Comparing - Label for comparison step.
+     * @property {string} Swapping - Label for swapping step.
+     */
+    export const BubbleSortKey = createKey('Comparing', 'Swapping');
 
-/**
- * Key for visualizing Bubble Sort actions.
- *
- * @constant
- * @type {Object}
- * @property {string} Comparing - Label for comparison step.
- * @property {string} Swapping - Label for swapping step.
- */
-export const BubbleSortKey = createKey('Comparing', 'Swapping');
+    /**
+     * Description object for Bubble Sort to be used in UI or documentation.  */
 
 /**
  * Description object for Bubble Sort to be used in UI or documentation.
@@ -85,7 +88,7 @@ export const BubbleSortDesc = {
     ),
     avgCase: (
         <span>
-      O(n<sup>2</sup>)
+    O(n<sup>2</sup>)
     </span>
     ),
     bestCase: <span>O(n)</span>,
@@ -111,4 +114,5 @@ export const BubbleSortDesc = {
     )
 };
 
-export default BubbleSort;
+
+    export default BubbleSort;
